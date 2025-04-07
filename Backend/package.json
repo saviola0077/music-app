@@ -1,0 +1,19 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Pharex Backend",
+  "license": "ISC",
+  "author": "Chima Kalu-Orji",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "server": "nodemon server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "mysql2": "^3.14.0",
+    "nodemon": "^3.1.9",
+    "sequelize": "^6.37.6"
+  }
+}
