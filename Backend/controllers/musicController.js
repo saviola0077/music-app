@@ -1,7 +1,7 @@
 const music = require("../models/musicModel");
 
 
-
+// Get music details
 exports.getMusic = async (req, res) => {
   try {
     const retMusic = await music.findAll();
@@ -11,6 +11,7 @@ exports.getMusic = async (req, res) => {
   }
 };
 
+// Create music
 exports.createMusic = async (req, res) => {
   try {
     const retMusic = await music.create(req.body);
@@ -20,9 +21,9 @@ exports.createMusic = async (req, res) => {
   }
 }; 
 
-
+// Get music by title
 exports.getMusicByTitle = async (req, res) => {
-  const { title } = req.body; // or req.body, depending on your route setup
+  const { title } = req.body; // destructure request body to get title
 
   try {
     const retMusic = await music.findOne({ where: { title } });
