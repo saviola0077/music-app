@@ -1,9 +1,10 @@
 const { Sequelize } = require("sequelize");
 
+// Database connection
 const sequelize = new Sequelize(
-  "music_db",
-  "avnadmin",
-  "AVNS_mRUTr8u81aUqzu66_xt",
+  "music_db", // database
+  "avnadmin", // username
+  "AVNS_mRUTr8u81aUqzu66_xt", // password
   {
     host: "mysql-bc3527b-saviola0077-dca6.j.aivencloud.com",
     port: 25716,
@@ -16,6 +17,7 @@ const sequelize = new Sequelize(
     },
   }
 );
+
 
 sequelize
   .authenticate()
