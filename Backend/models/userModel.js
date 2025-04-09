@@ -6,6 +6,7 @@ const sequelize = require("../config/db");
 const User = sequelize.define(
   "User",
   {
+    //Defining the Model Attributes (Fields)
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
