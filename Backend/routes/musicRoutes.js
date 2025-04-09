@@ -1,3 +1,4 @@
+//created a new router instance
 const express = require("express");
 const newMusic = require("../controllers/musicController");
 
