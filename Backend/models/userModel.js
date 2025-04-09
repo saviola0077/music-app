@@ -1,3 +1,4 @@
+//creating a sequelized object to define the data types
 const { DataTypes } = require("sequelize");
 const sequelize = require("../config/db");
 
