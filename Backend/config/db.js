@@ -4,7 +4,7 @@ const { Sequelize } = require("sequelize");
 const sequelize = new Sequelize(
   "music_db", // database
   "avnadmin", // username
-  "AVNS_mRUTr8u81aUqzu66_xt", // password
+  "AVNS_mRUTr8u81aUqzu66_xt", // password for database
   {
     host: "mysql-bc3527b-saviola0077-dca6.j.aivencloud.com",
     port: 25716,
