@@ -9,7 +9,7 @@ exports.createUser = async (req, res) => {
     res.status(400).json({ error: error.message });
   }
 };
-
+//getting the user function to retrieve users from the database
 exports.getUsers = async (req, res) => {
   try {
     const users = await User.findAll();
