@@ -7,4 +7,16 @@ const router = express.Router();
 //defined routes that listens to post request
 router.post("/getMusic", newMusic.getMusic);
 
+//Create a music
+router.post("/createMusic", newMusic.createMusic);
+
+// ✅ Route to delete music by ID
+router.post('/deleteMusic/:id', newMusic.deleteMusic);
+
+// ✅ Route to delete music by ID
+router.post('/getMusicById/:id', newMusic.getMusicById);
+
+router.post('/updateMusic/:id', newMusic.updateMusic);
+
+
 module.exports = router;
