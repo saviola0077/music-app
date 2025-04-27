@@ -1,12 +1,12 @@
 const { Sequelize } = require("sequelize");
 
-// Database connection
+// creating a connection to your MySQL database
 const sequelize = new Sequelize(
   "music_db", // database
   "avnadmin", // username for database
   "AVNS_mRUTr8u81aUqzu66_xt", // password for database
   {
-    host: "mysql-bc3527b-saviola0077-dca6.j.aivencloud.com",
+    host: "mysql-bc3527b-saviola0077-dca6.j.aivencloud.com", //the server URL where your MySQL database is hosted
     port: 25716,
     dialect: "mysql",
     dialectOptions: {
@@ -18,7 +18,7 @@ const sequelize = new Sequelize(
   }
 );
 
-
+//tries to connect to the database with the credentials and settings provided
 sequelize
   .authenticate()
   .then(() => console.log("MySQL connected"))

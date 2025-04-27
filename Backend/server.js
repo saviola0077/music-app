@@ -4,14 +4,14 @@ const userRoutes = require("./routes/userRoutes");
 const musicRoutes = require("./routes/musicRoutes");
 const uploadRoute = require('./routes/uploadRoutes')
 
-
+//important for frontend-backend communication
 const cors = require('cors');
 const app = express();
 
 app.use(cors()); // Enable CORS for all routes
 app.use(express.json());
 
-// Initialize routes
+// setting up api routes for user,music,upload
 app.use('/api', uploadRoute);
 app.use("/api", userRoutes);
 app.use("/api", musicRoutes);  //http://localhost:4000/api/getMusic
