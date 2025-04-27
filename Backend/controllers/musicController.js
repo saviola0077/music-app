@@ -6,10 +6,22 @@ sequelize.sync({ alter: true }) // will match model with DB table
   .catch(err => console.error('Failed to sync database:', err));
 
 
+
+//NB: FOR THE MUSIC CONTROLLER I BUILT A MUSIC CRUD API
+//You are building a Music CRUD API:
+
+//Create music
+
+//Read (get all music, get by ID, get by title)
+ //Update music by ID
+ //Delete music by ID
+
+
+
 // Get all music data
 exports.getMusic = async (req, res) => {
   try {
-    const retMusic = await music.findAll();
+    const retMusic = await music.findAll();//Fetch all records from the music table
 
     //The json format is like this example {"title":"Joy is Coming","artist":"Asake"}
     res.status(200).json(retMusic);
@@ -22,7 +34,7 @@ exports.getMusic = async (req, res) => {
 exports.createMusic = async (req, res) => {
   const musicData = req.body
   try {
-    const retMusic = await music.create(musicData);
+    const retMusic = await music.create(musicData);//Insert new record into the table.
     res.status(201).json(retMusic);
   } catch (error) {
     res.status(400).json({ error: error.message });
@@ -48,7 +60,7 @@ exports.deleteMusic = async (req, res) => {
   }
 };
 
-//
+
 exports.getMusicById = async (req, res) => {
   const { id } = req.params; // Get the ID from the URL
 
@@ -71,7 +83,7 @@ exports.getMusicByTitle = async (req, res) => {
   const { title } = req.body; // destructure request body to get title
 
   try {
-    const retMusic = await music.findOne({ where: { title } });
+    const retMusic = await music.findOne({ where: { title } });//Find a single music record where the title matches.
 
     if (!retMusic) {
       return res.status(404).json({ message: "Music not found." });
