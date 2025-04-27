@@ -1,6 +1,6 @@
 // controllers/cloudinaryUpload.js
 const cloudinary = require('cloudinary').v2;
-const fs = require('fs');
+const fs = require('fs'); //fs is Node.js's File System module — used here to delete files after uploading
 
 cloudinary.config({
   cloud_name: 'ddl0ffhyc',
@@ -12,6 +12,7 @@ cloudinary.config({
 // Make sure you have configured your cloudinary details (key, secret, cloud_name) somewhere globally
 const uploadFile = async (req, res) => {
   try {
+    //extracting files from the incoming request:
     const imageFile = req.files.image?.[0];
     const audioFile = req.files.audio?.[0];
 

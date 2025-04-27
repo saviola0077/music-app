@@ -11,7 +11,7 @@ router.post(
       { name: 'image', maxCount: 1 },
       { name: 'audio', maxCount: 1 },
     ]),
-    uploadFile
+    uploadFile //This function will likely do things like saving the file details to the database or sending a response to the client about the success or failure of the upload.
   );
 
 module.exports = router;

@@ -10,12 +10,13 @@ router.post("/getMusic", newMusic.getMusic);
 //Create a music
 router.post("/createMusic", newMusic.createMusic);
 
-// ✅ Route to delete music by ID
+//  Route to delete music by ID
 router.post('/deleteMusic/:id', newMusic.deleteMusic);
 
-// ✅ Route to delete music by ID
+// Route to get music by ID
 router.post('/getMusicById/:id', newMusic.getMusicById);
 
+//Route to update music by ID
 router.post('/updateMusic/:id', newMusic.updateMusic);
 
 
